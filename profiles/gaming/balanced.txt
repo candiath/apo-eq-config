@@ -1,0 +1,34 @@
+# APO Equalizer Configuration - Balanced Gaming Profile
+# Optimized for Sony DualSense haptic audio feedback
+# This profile provides a balanced gaming experience with enhanced haptic response
+
+# Device selection - apply to primary audio device
+Device: all
+
+# Pre-amplification to prevent clipping
+Preamp: -6 dB
+
+# Balanced EQ curve for gaming
+# Enhanced sub-bass for haptic feedback (20-80 Hz)
+Filter: ON PK Fc 40 Hz Gain 4 dB Q 1.2
+Filter: ON PK Fc 60 Hz Gain 3 dB Q 1.5
+Filter: ON PK Fc 80 Hz Gain 2 dB Q 1.0
+
+# Midrange clarity for voice and environmental sounds (200-2000 Hz)
+Filter: ON PK Fc 300 Hz Gain -1 dB Q 0.8
+Filter: ON PK Fc 800 Hz Gain 1 dB Q 1.0
+Filter: ON PK Fc 1500 Hz Gain 2 dB Q 0.7
+
+# High-frequency enhancement for detail and positioning (3000-8000 Hz)
+Filter: ON PK Fc 3000 Hz Gain 1.5 dB Q 1.2
+Filter: ON PK Fc 5000 Hz Gain 1 dB Q 1.0
+Filter: ON PK Fc 7000 Hz Gain 0.5 dB Q 1.5
+
+# Gentle high-frequency roll-off to prevent harshness
+Filter: ON HSC Fc 10000 Hz Gain -0.5 dB Q 0.7
+
+# Dynamic compression for consistent haptic response
+Compressor: ratio 3:1 attack 5ms release 50ms threshold -18dB knee 3dB
+
+# Slight stereo width enhancement for immersion
+Copy: L=L+0.1*R R=R+0.1*L

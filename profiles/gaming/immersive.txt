@@ -1,0 +1,39 @@
+# APO Equalizer Configuration - Immersive Gaming Profile
+# Maximum immersion with enhanced haptic feedback and spatial audio
+# Best for single-player adventures and atmospheric games
+
+Device: all
+
+# Higher preamp reduction to accommodate larger dynamic range
+Preamp: -8 dB
+
+# Extended sub-bass for maximum haptic impact
+Filter: ON PK Fc 25 Hz Gain 6 dB Q 1.0   # Deep rumble
+Filter: ON PK Fc 40 Hz Gain 5 dB Q 1.2   # Engine/explosion base
+Filter: ON PK Fc 60 Hz Gain 4 dB Q 1.0   # Mid-bass punch
+Filter: ON PK Fc 80 Hz Gain 3 dB Q 0.8   # Bass clarity
+
+# Sculpted midrange for immersion
+Filter: ON PK Fc 150 Hz Gain -1 dB Q 1.0  # Clean up low-mid
+Filter: ON PK Fc 300 Hz Gain -0.5 dB Q 0.8 # Reduce boxiness
+Filter: ON PK Fc 600 Hz Gain 1.5 dB Q 1.0  # Vocal presence
+Filter: ON PK Fc 1000 Hz Gain 2 dB Q 0.7   # Instrument clarity
+Filter: ON PK Fc 1800 Hz Gain 2.5 dB Q 0.9 # Environmental detail
+
+# Enhanced treble for atmosphere and detail
+Filter: ON PK Fc 3000 Hz Gain 2 dB Q 1.2   # Presence
+Filter: ON PK Fc 4500 Hz Gain 1.5 dB Q 1.0 # Air and detail
+Filter: ON PK Fc 6500 Hz Gain 1 dB Q 1.5   # Sparkle
+Filter: ON PK Fc 9000 Hz Gain 0.5 dB Q 1.2 # Extended highs
+
+# Gentle high-frequency shaping
+Filter: ON HSC Fc 15000 Hz Gain -0.5 dB Q 0.5
+
+# Moderate compression for cinematic dynamics
+Compressor: ratio 4:1 attack 8ms release 80ms threshold -20dB knee 4dB
+
+# Enhanced stereo width for immersion
+Copy: L=0.9*L+0.15*R R=0.9*R+0.15*L
+
+# Optional subtle reverb for atmosphere (comment out if not desired)
+# Convolution: impulse_responses/room_small.wav

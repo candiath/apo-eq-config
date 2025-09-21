@@ -1,0 +1,35 @@
+# APO Equalizer Configuration - Audiophile Media Profile
+# High-fidelity audio processing with subtle haptic enhancement
+# For critical listening and high-quality audio sources
+
+Device: all
+
+# Minimal preamp to preserve dynamics
+Preamp: -3 dB
+
+# Subtle low-frequency enhancement for haptic feedback
+Filter: ON PK Fc 30 Hz Gain 1.5 dB Q 1.8  # Sub-bass extension
+Filter: ON PK Fc 50 Hz Gain 1 dB Q 1.5    # Bass definition
+Filter: ON PK Fc 80 Hz Gain 0.5 dB Q 1.2  # Bass clarity
+
+# Minimal midrange adjustments for transparency
+Filter: ON PK Fc 250 Hz Gain -0.5 dB Q 1.0 # Slight cleanup
+Filter: ON PK Fc 1000 Hz Gain 0.3 dB Q 0.6 # Subtle presence
+Filter: ON PK Fc 2000 Hz Gain 0.5 dB Q 0.8 # Gentle enhancement
+
+# Conservative treble enhancement
+Filter: ON PK Fc 4000 Hz Gain 0.8 dB Q 1.2 # Presence
+Filter: ON PK Fc 7000 Hz Gain 0.5 dB Q 1.5 # Air
+Filter: ON PK Fc 10000 Hz Gain 0.3 dB Q 1.8 # Extended highs
+
+# Very gentle high-frequency shaping
+Filter: ON HSC Fc 16000 Hz Gain -0.2 dB Q 0.4
+
+# Minimal compression to preserve dynamics
+Compressor: ratio 2:1 attack 15ms release 150ms threshold -12dB knee 2dB
+
+# Pure stereo - no processing
+Copy: L=L R=R
+
+# Optional: De-esser for sibilance control (uncomment if needed)
+# DeEsser: frequency 6500Hz threshold -25dB ratio 4:1

@@ -1,0 +1,64 @@
+# APO EQ Config - Git Ignore File
+
+# Backup files
+*.backup
+*.bak
+*~
+*.orig
+
+# Temporary files
+*.tmp
+*.temp
+/tmp/
+
+# Windows system files
+Thumbs.db
+Desktop.ini
+*.lnk
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux system files
+*~
+.directory
+
+# Editor files
+*.swp
+*.swo
+.vscode/
+.idea/
+*.sublime-*
+
+# Log files
+*.log
+logs/
+
+# Test output
+test_output/
+test_results/
+
+# Personal configurations (users should not commit personal settings)
+profiles/personal/
+my-config.txt
+personal-*.txt
+
+# Build artifacts (if any tools generate them)
+build/
+dist/
+*.exe
+*.pyc
+__pycache__/
+
+# Audio files (large files that shouldn't be in the repo)
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+
+# Documentation build output
+docs/_build/
+site/

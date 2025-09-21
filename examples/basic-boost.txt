@@ -1,0 +1,35 @@
+# Basic Bass Boost Example
+# A simple configuration to demonstrate bass enhancement for haptic feedback
+# Perfect for beginners to understand the basics of APO configuration
+
+# Apply to all audio devices
+Device: all
+
+# Reduce overall level to prevent clipping
+# This is crucial when boosting frequencies
+Preamp: -4 dB
+
+# Simple bass boost using peak filters
+# These frequencies are most effective for haptic feedback
+
+# Sub-bass boost for deep haptic response
+Filter: ON PK Fc 40 Hz Gain 3 dB Q 1.0
+# Fc = Center frequency (40 Hz is deep bass)
+# Gain = Amount of boost (3 dB is moderate)
+# Q = Width of boost (1.0 is moderate width)
+
+# Mid-bass boost for punch and impact
+Filter: ON PK Fc 80 Hz Gain 2 dB Q 0.8
+# Slightly wider filter (Q 0.8) for natural sound
+# Lower gain (2 dB) to avoid overwhelming
+
+# Optional: Slight reduction in lower midrange to prevent muddiness
+Filter: ON PK Fc 200 Hz Gain -1 dB Q 0.7
+# Small cut to clean up the sound
+# Wider filter (Q 0.7) for gentle adjustment
+
+# Notes:
+# - Start with these settings and adjust to taste
+# - If sound is distorted, reduce the Preamp value further (try -6 dB)
+# - If haptic feedback is too weak, increase bass gain values
+# - If sound is muddy, increase the 200 Hz cut or add more midrange cuts
